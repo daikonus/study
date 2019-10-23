@@ -3,50 +3,58 @@
     <head>
         <meta charset="UTF-8">
         <title>タイトル</title>
-        
+
         <!-- UIkitを使う為の指定 -->
         <link rel="stylesheet" href="uikit-3.2.1\css\uikit.min.css">
         <script src="uikit-3.2.1\js\uikit.min.js"></script>
-
     </head>
     <body>
 
-        <!-- ヘッダ部分 -->
-        <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="#">Logo</a>            
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li>
-                            <a href="#">Parent</a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-active"><a href="#">Active</a></li>
-                                    <li><a href="#">Item</a></li>
-                                    <li><a href="#">Item</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-            
-                </div>
-            </nav>
+        <!-- グローバルヘッダ部分 -->
+        <div class="uk-navbar-container" uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="" class="uk-navbar-item uk-logo" href="#">Logo</a>
+            <ul class="uk-navbar-nav">...</ul>
+            <div class="uk-navbar-item">...</div>
+          </div>
+        </div>
+        
+        <!-- ヘッダメニュー部分 -->
+        <div class="uk-grid-small uk-text-center" uk-grid>
+          <div class="uk-width-expand">
+            <ul uk-tab>
+                <li class="uk-active"><a href="#">Left</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+          </div>
+        </div>
 
         <!-- メインコンテンツ部分 -->
-        <div class="uk-grid-small uk-child-width-1-3@s uk-text-center" uk-grid>
+        <div class="uk-panel">
+          <img class="uk-align-left uk-margin-remove-adjacent" src="images/light.jpg" width="225" height="150" alt="Example image">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="uk-grid-small uk-child-width-1-3@m uk-text-center" uk-grid>
+          <div>
             <div class="uk-card uk-card-default uk-card-hover uk-card-body">
                 <h3 class="uk-card-title">見出し</h3>
                 <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+          </div>
+          <div>
             <div class="uk-card uk-card-default uk-card-hover uk-card-body">
                 <h3 class="uk-card-title">見出し</h3>
                 <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+          </div>
+          <div>
             <div class="uk-card uk-card-default uk-card-hover uk-card-body">
                 <h3 class="uk-card-title">見出し</h3>
                 <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+          </div>
         </div>
     </body>
 </html>
