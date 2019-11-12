@@ -1,5 +1,5 @@
 {
-  "name": "webserver",
+  "name": "simple_server",
   "version": "1.0.0",
   "description": "easy webserver",
   "main": "main.js",
@@ -9,7 +9,6 @@
   "author": "daikonus",
   "license": "ISC",
   "dependencies": {
-    "http": "0.0.0",
-    "http-status-code": "^2.1.0"
+    "http-status-codes": "^1.4.0"
   }
 }
