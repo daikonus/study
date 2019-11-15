@@ -1,5 +1,5 @@
 const httpStatus = require("http-status-codes"),
-  contentTypes = require("./contentType"),
+  contentTypes = require("./contentTypes"),
   utils = require("./utils");
 
 const routes = {

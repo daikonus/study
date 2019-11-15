@@ -1,6 +1,6 @@
 const fs = require("fs"),
   httpStatus = require("http-status-codes"),
-  contentTypes = require("./contentType");
+  contentTypes = require("./contentTypes");
 
 module .exports = {
   getFile: (file, res) => {
