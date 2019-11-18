@@ -1,17 +1,11 @@
+const homeController = require("./controllers/homeController");
 const port = 3000,
   express = require("express"),
   app = express();
 
 
-app.get("/items/:vegetable", (req, res) => {
-  res.send(req.params.vegetable);
-  let veg = req.params.vegetable;
-  res.send(`This is the page for ${veg}`)
-  app.use((req,res, next) => {
-    console.log(`request made to: ${req.url}`);
-    nest();
-  });
-});
+app.get("/items/:vegetable", homeController.sendReqParam);
+app.post("/sign_up", homeController.userSignProcessor);
 
 app.listen(port, () => {
   console.log(`Server runing on port number: ${port}`);
