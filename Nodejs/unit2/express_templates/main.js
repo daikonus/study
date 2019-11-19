@@ -10,3 +10,4 @@ app.listen(port, () => {
 });
 
 app.get("/name/:myName", homeController.respondWithName);
+app.use(layouts);
