@@ -1,0 +1,16 @@
+{
+  "name": "express_templates",
+  "version": "1.0.0",
+  "description": "template engine practices",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "daikonus",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.2",
+    "express": "^4.17.1"
+  }
+}
