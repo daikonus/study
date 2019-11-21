@@ -4,6 +4,15 @@ const express = require("express"),
   errorController = require("./controllers/errorController"),
   layouts = require("express-ejs-layouts");
 
+// MongoDBをNodejsから操作する為のモジュールのロードとクライアント
+const MongoDB = require("mongodb").MongoClient,
+  dbURL = "mongodb://localhost:27017"
+  dbName = "recipe_db";
+
+MongoDB.connect(dbURL, (error, client) => {
+
+});
+
 // HTTPリクエストを３０００ポートで受け付ける
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"), () => {
