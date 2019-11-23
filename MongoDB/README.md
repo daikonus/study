@@ -11,15 +11,31 @@ build environment:
     distarch: x86_64
     target_arch: x86_64
 
-## 起動方法（Windows）
+## 起動方法(Windows)
 参考：MongoDB 3.0.6（Windows版）をインストールして起動するまでの手順
 https://qiita.com/moto_pipedo/items/c3bb40370ba2792143ad#%E5%A4%96%E9%83%A8%E3%82%B5%E3%82%A4%E3%83%88%E6%A6%82%E8%A6%81%E3%81%A8%E9%81%8B%E7%94%A8%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
 
 [通常の起動]
-mongod --config C:\Users\d-noguchi\git\study\MongoDB\mongodb_win.conf
+mongod --config <設定ファイルパス>
 
 [サービスとして起動]
-mongod --install --config C:\Users\d-noguchi\git\study\MongoDB\mongodb_win.conf
+mongod --install --config <設定ファイルパス>
+
+## 起動方法(Mac)
+参考：Install MongoDB Community Edition on macOS
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+https://www.codexpedia.com/database/mongodb-mongod-start-and-stop/
+
+デフォルト設定ファイル
+/usr/local/etc/mongod.conf
+
+[brewで起動]
+brew services start mongodb-community
+brew services stop mongodb-community
+
+[mongodで起動]
+mongod --config <設定ファイルパス> --fork
+kill -9 <PID>
 
 ## DB操作Tips
 ### 頻出
